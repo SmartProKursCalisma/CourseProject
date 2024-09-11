@@ -23,9 +23,9 @@ namespace CourseProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userName = textBox1.Text;
+            string userName = "melih.kamar";
             bool isLogin = _userRepository
-                .Login(userName,textBox2.Text);
+                .Login(userName,"123456");
             if (isLogin)
             {
                 MessageBox.Show($"Giriş Başarılı {UserHelper.Role}", "Bilgilendirme");
