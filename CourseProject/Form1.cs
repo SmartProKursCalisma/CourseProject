@@ -1,4 +1,5 @@
-﻿using CourseProject.Repository;
+﻿using CourseProject.Helper;
+using CourseProject.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,10 @@ namespace CourseProject
                 .Login(userName,textBox2.Text);
             if (isLogin)
             {
-                MessageBox.Show("Giriş Başarılı", "Bilgilendirme");
+                MessageBox.Show($"Giriş Başarılı {UserHelper.Role}", "Bilgilendirme");
+                StudentForm st = new StudentForm();
+                this.Hide();
+                st.Show();
             }
             else
             {
