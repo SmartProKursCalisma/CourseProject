@@ -76,5 +76,16 @@ namespace CourseProject
             dataGridView1.DataSource = _studentRepository.StudentList();
             dataGridView1.Columns["Id"].DisplayIndex = 0;
         }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            int currentId = int.Parse(txtId.Text);
+            if (currentId > 0)
+            {
+              int affectedRowsCount =   _studentRepository.DeleteStudent(currentId);
+                MessageBox.Show($"{currentId} Nolu Öğrenci Silinmiştir.", "Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                StudentListView();
+            }
+        }
     }
 }

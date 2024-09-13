@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtStudentName = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
@@ -41,6 +39,7 @@
             this.cmbGrades = new System.Windows.Forms.ComboBox();
             this.btnNewStudent = new System.Windows.Forms.Button();
             this.btnStudentListRefresh = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,14 +48,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(343, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(343, 344);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // lblUsername
             // 
@@ -102,7 +96,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(373, 122);
+            this.btnUpdate.Location = new System.Drawing.Point(373, 149);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 34);
             this.btnUpdate.TabIndex = 7;
@@ -129,7 +123,7 @@
             // 
             // btnNewStudent
             // 
-            this.btnNewStudent.Location = new System.Drawing.Point(479, 122);
+            this.btnNewStudent.Location = new System.Drawing.Point(479, 149);
             this.btnNewStudent.Name = "btnNewStudent";
             this.btnNewStudent.Size = new System.Drawing.Size(83, 34);
             this.btnNewStudent.TabIndex = 10;
@@ -139,7 +133,7 @@
             // 
             // btnStudentListRefresh
             // 
-            this.btnStudentListRefresh.Location = new System.Drawing.Point(568, 122);
+            this.btnStudentListRefresh.Location = new System.Drawing.Point(568, 149);
             this.btnStudentListRefresh.Name = "btnStudentListRefresh";
             this.btnStudentListRefresh.Size = new System.Drawing.Size(69, 34);
             this.btnStudentListRefresh.TabIndex = 11;
@@ -147,11 +141,26 @@
             this.btnStudentListRefresh.UseVisualStyleBackColor = true;
             this.btnStudentListRefresh.Click += new System.EventHandler(this.btnStudentListRefresh_Click);
             // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDeleteStudent.Location = new System.Drawing.Point(479, 83);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(83, 47);
+            this.btnDeleteStudent.TabIndex = 12;
+            this.btnDeleteStudent.Text = "Öğrenciyi Sil";
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
+            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 377);
+            this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnStudentListRefresh);
             this.Controls.Add(this.btnNewStudent);
             this.Controls.Add(this.cmbGrades);
@@ -175,7 +184,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.TextBox txtPhoneNumber;
@@ -186,5 +194,6 @@
         private System.Windows.Forms.ComboBox cmbGrades;
         private System.Windows.Forms.Button btnNewStudent;
         private System.Windows.Forms.Button btnStudentListRefresh;
+        private System.Windows.Forms.Button btnDeleteStudent;
     }
 }
